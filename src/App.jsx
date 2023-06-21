@@ -1,11 +1,9 @@
-import { TheFooter } from './components/TheFooter/TheFooter';
-import { Home } from './components/home';
+import { Home } from './components/Home';
 
 export const App = () => {
   return (
     <>
       <Home />
-      <TheFooter />
     </>
   );
 };
