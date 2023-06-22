@@ -1,0 +1,31 @@
+@import 'main';
+.video {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $GRAY;
+  position: relative;
+
+  &__img {
+    width: 100%;
+  }
+  &__button {
+    position: absolute;
+    z-index: 2;
+    background-color: $YELLOW;
+    width: 121px;
+    height: 121px;
+    top: 50%;
+    right: 50%;
+    border-radius: 100%;
+    cursor: pointer;
+    &::before {
+      width: 10px;
+      height: 10px;
+      border: 1px solid red;
+      //   position: absolute;
+      //   top: 0%;
+      //   right: 0%;
+      z-index: 3;
+    }
+  }
+}
