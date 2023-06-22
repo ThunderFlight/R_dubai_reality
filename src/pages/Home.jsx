@@ -1,7 +1,13 @@
+import { HomeOurExpertise, HomeQuote, HomeVideo } from '../components/Home';
+
 export const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <HomeOurExpertise />
+
+      <HomeVideo />
+
+      <HomeQuote />
     </>
   );
 };

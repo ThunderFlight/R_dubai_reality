@@ -1,1 +1,3 @@
-export * from './Home';
+export * from './HomeOurExpertise/';
+export * from './HomeQuote/';
+export * from './HomeVideo/';
