@@ -1,5 +1,6 @@
 import videoBg from '../../../images/homeVideoBg.jpg';
 import styles from './HomeVideo.module.scss';
+
 export const HomeVideo = () => {
   return (
     <section className={styles.video}>
@@ -8,7 +9,7 @@ export const HomeVideo = () => {
         src={videoBg}
         alt='view'
       />
-      <button className={styles.video__button}></button>
+      <button className={styles.video__button} />
     </section>
   );
 };

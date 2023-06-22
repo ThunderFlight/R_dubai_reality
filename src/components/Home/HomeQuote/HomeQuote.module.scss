@@ -1,19 +1,20 @@
 @import 'main';
 
-.HomeQuote {
+.homeQuote {
   background-color: $GRAY;
   @include flex(center);
-  padding-top: 119px;
+  padding-top: 120px;
+
   &__text {
     padding: 100px 80px 100px 80px;
     font-size: 30px;
-
     @include text(30, 400, $WHITE);
     span {
       color: $YELLOW;
     }
   }
 }
+
 .container {
   border: 1px solid $YELLOW;
 }
