@@ -1,12 +1,13 @@
 import { Container } from '../../common/Container/Container';
 import styles from './HomeOurExpertise.module.scss';
+
 export const HomeOurExpertise = () => {
   return (
     <section className={styles.ourExpertise}>
       <Container className={styles.container}>
         <h2 className={styles.ourExpertise__title}>Our expertise</h2>
         <span className={styles.ourExpertise__desc}>
-          "The best apartment in Dubai" we will find your dream
+          &quot;The best apartment in Dubai&quot; we will find your dream
         </span>
         <p className={styles.ourExpertise__text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh massa, euismod
