@@ -1,0 +1,13 @@
+@import 'main';
+#block-expertise{
+ @include flex-col(center,center)
+}
+#block-expertise{
+    
+}
+#train{
+    color: $YELLOW;
+}
+.color-white{
+    color: $WHITE;
+}
