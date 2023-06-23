@@ -1,9 +1,20 @@
 @import 'main';
 
 .container {
-  width: 100%;
-  max-width: 1110px;
-  padding: 0 16px;
+  @include media($SCREEN_IPHONE_5) {
+    max-width: 1110px;
+    padding: 0 16px;
+  }
+  @include media($SCREEN_TABLET) {
+    width: 100%;
+    max-width: 1110px;
+    padding: 0 16px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    width: 100%;
+    max-width: 1110px;
+    padding: 0 16px;
+  }
   @include media($SCREEN_TABLET) {
     padding-left: 35px;
     padding-right: 35px;
