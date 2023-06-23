@@ -1,0 +1,44 @@
+@import 'main';
+
+.contactUs {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $GRAY;
+  @include flex-col(center);
+
+  &__text {
+    @include flex-col(center, center);
+    height: 200px;
+    &_question {
+      @include text(18px, 600, $GRAY);
+    }
+
+    &_title {
+      @include text(120px, 700, $GRAY);
+    }
+  }
+
+  &__addMassage {
+    @include flex-row(center);
+    &_input {
+      width: 427px;
+      height: 61px;
+      border: 0px;
+      padding: 15px 30px;
+    }
+
+    &_button {
+      width: 165px;
+      height: 61px;
+      background-color: $GRAY;
+      color: $WHITE;
+    }
+  }
+}
+
+.bg {
+  padding-top: 87px;
+  background-image: url(../../../images/contactUsBg.jpg);
+  height: 400px;
+}
