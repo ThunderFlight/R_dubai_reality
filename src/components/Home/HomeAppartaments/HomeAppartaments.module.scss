@@ -1,106 +1,50 @@
 @import 'main';
-.container {
-  @include media($SCREEN_IPHONE_5) {
-    @include flex-col(center);
-  }
 
-  @include media($SCREEN_TABLET) {
-    @include flex-row(center);
-  }
+.appartaments {
+  width: 100%;
+  @include flex(center);
+  background-color: $GRAY;
 
-  @include media($SCREEN_DESKTOP) {
-    @include flex-row(center);
-  }
+  &__wrapper {
+    width: 100%;
+    margin-bottom: 20px;
 
-  &__firstAppartaments {
-    @include media($SCREEN_IPHONE_5) {
-      margin-right: 0px;
+    &:last-child {
+      margin-bottom: 0;
     }
 
     @include media($SCREEN_TABLET) {
-      margin-right: 30px;
+      width: 49%;
+      margin-bottom: 0;
     }
 
-    @include media($SCREEN_DESKTOP) {
-      margin-right: 23px;
-    }
+    &_image {
+      width: 100%;
+      margin-bottom: 20px;
 
-    img {
-      @include media($SCREEN_IPHONE_5) {
-        width: 280px;
-        height: 193px;
-        margin-bottom: 20px;
-      }
       @include media($SCREEN_TABLET) {
-        width: 328px;
-        height: 194px;
         margin-bottom: 30px;
       }
 
       @include media($SCREEN_DESKTOP) {
-        width: 543px;
-        height: 312px;
         margin-bottom: 70px;
       }
     }
 
-    p {
-      @include media($SCREEN_IPHONE_5) {
-        width: 280px;
-        @include text(14px, 400, $WHITE);
-      }
-      @include media($SCREEN_TABLET) {
-        width: 328px;
-        @include text(14px, 400, $WHITE);
-      }
-      @include media($SCREEN_DESKTOP) {
-        width: 543px;
-        @include text(18px, 400, $WHITE);
-      }
-    }
-  }
-
-  &__secondAppartaments {
-    img {
-      @include media($SCREEN_IPHONE_5) {
-        width: 280px;
-        height: 193px;
-        margin-bottom: 20px;
-      }
-      @include media($SCREEN_TABLET) {
-        width: 328px;
-        height: 194px;
-        margin-bottom: 30px;
-      }
+    &_descr {
+      @include text(14px, 400, $WHITE);
 
       @include media($SCREEN_DESKTOP) {
-        width: 543px;
-        height: 312px;
-        margin-bottom: 70px;
-      }
-    }
-
-    p {
-      @include media($SCREEN_IPHONE_5) {
-        width: 280px;
-        @include text(14px, 400, $WHITE);
-      }
-      @include media($SCREEN_TABLET) {
-        width: 328px;
-        @include text(14px, 400, $WHITE);
-      }
-      @include media($SCREEN_DESKTOP) {
-        width: 543px;
-        @include text(18px, 400, $WHITE);
+        font-size: 18px;
       }
     }
   }
 }
 
-.appartaments {
-  width: 100%;
+.container {
+  @include flex-col(space-between, baseline);
 
-  @include flex(center);
-
-  background-color: $GRAY;
+  @include media($SCREEN_TABLET) {
+    @include flex-row(space-between);
+  }
 }

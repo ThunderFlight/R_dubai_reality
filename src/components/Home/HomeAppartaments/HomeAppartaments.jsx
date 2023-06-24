@@ -1,15 +1,19 @@
-import appartament1 from '../../../images/homeAppartaments1.jpg';
-import appartament2 from '../../../images/homeAppartaments2.jpg';
-import { Container } from '../../common/Container/Container';
+import AppartamentFirst from '../../../images/homeAppartaments1.jpg';
+import AppartamentSecond from '../../../images/homeAppartaments2.jpg';
+import { Container } from '../../common/';
 import styles from './HomeAppartaments.module.scss';
 
 export const HomeAppartaments = () => {
   return (
     <section className={styles.appartaments}>
       <Container className={styles.container}>
-        <div className={styles.container__firstAppartaments}>
-          <img src={appartament1} />
-          <p>
+        <div className={styles.appartaments__wrapper}>
+          <img
+            className={styles.appartaments__wrapper_image}
+            src={AppartamentFirst}
+            alt='AppartamentFirst'
+          />
+          <p className={styles.appartaments__wrapper_descr}>
             Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit,
             rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor,
             eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a
@@ -22,9 +26,13 @@ export const HomeAppartaments = () => {
           </p>
         </div>
 
-        <div className={styles.container__secondAppartaments}>
-          <img src={appartament2} />
-          <p>
+        <div className={styles.appartaments__wrapper}>
+          <img
+            className={styles.appartaments__wrapper_image}
+            src={AppartamentSecond}
+            alt='AppartamentSecond'
+          />
+          <p className={styles.appartaments__wrapper_descr}>
             Vivamus non diam vel lorem efficitur mattis in gravida ante. Ut ullamcorper dapibus
             ante, eu tincidunt orci feugiat vel. Curabitur eget lectus lectus. Pellentesque
             malesuada, felis at accumsan interdum, nisl mi fermentum est, eu suscipit dui lorem a

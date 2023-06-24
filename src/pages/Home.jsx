@@ -1,5 +1,10 @@
-import { HomeContactUs, HomeOurExpertise, HomeQuote, HomeVideo } from '../components/Home';
-import { HomeAppartaments } from '../components/Home/HomeAppartaments';
+import {
+  HomeAppartaments,
+  HomeContactUs,
+  HomeOurExpertise,
+  HomeQuote,
+  HomeVideo,
+} from '../components/Home';
 
 export const Home = () => {
   return (
