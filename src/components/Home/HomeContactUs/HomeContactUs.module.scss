@@ -7,9 +7,9 @@
   background-color: $GRAY;
   @include flex-col(center);
 
-  &__text {
+  &__wrapper {
     @include flex-col(center, center);
-    height: 200px;
+
     &_question {
       @include text(18px, 600, $GRAY);
     }
@@ -23,16 +23,17 @@
     @include flex-row(center);
     &_input {
       width: 427px;
-      height: 61px;
       border: 0px;
       padding: 15px 30px;
     }
 
     &_button {
       width: 165px;
-      height: 61px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       background-color: $GRAY;
       color: $WHITE;
+      cursor: pointer;
     }
   }
 }
@@ -40,5 +41,45 @@
 .bg {
   padding-top: 87px;
   background-image: url(../../../images/contactUsBg.jpg);
-  height: 400px;
+  min-height: 400px;
+}
+
+.modalWindow {
+  &__wrapper {
+    @include flex(center, center);
+    z-index: 3;
+    position: fixed;
+
+    width: 100%;
+    height: 1070px;
+    background-color: rgba($color: $GRAY, $alpha: 0.9);
+    top: 0;
+    left: 0;
+    &_centerBlock {
+      @include flex-col(center, center);
+      width: 729px;
+      padding-top: 170px;
+      padding-bottom: 170px;
+      background-color: white;
+
+      &_thanks {
+        @include text(60px, 700, $GRAY);
+      }
+
+      &_email {
+        @include text(30px, 700, $GRAY);
+      }
+
+      &_cross {
+        background-image: url(../../../images/contactUsCross.png);
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 4;
+        left: 1325px;
+        bottom: 755px;
+      }
+    }
+  }
 }
