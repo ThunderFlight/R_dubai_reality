@@ -30,30 +30,29 @@ export const HomeContactUs = () => {
   };
   return (
     <section className={styles.contactUs}>
-      <div className={styles.bg}>
-        <div className={styles.contactUs__wrapper}>
-          <span className={styles.contactUs__wrapper_question}>Do you have any questions?</span>
-          <h2 className={styles.contactUs__wrapper_title}>Contact us</h2>
-        </div>
-
-        <form
-          className={styles.contactUs__addMassage}
-          onSubmit={onSubmit}>
-          <input
-            type='email'
-            placeholder='Enter your mail'
-            className={styles.contactUs__addMassage_input}
-            onChange={valOfInp}
-            value={val}
-          />
-          <button
-            type='submit'
-            className={styles.contactUs__addMassage_button}
-            disabled={validate}>
-            Send
-          </button>
-        </form>
+      <div className={styles.contactUs__wrapper}>
+        <span className={styles.contactUs__wrapper_question}>Do you have any questions?</span>
+        <h2 className={styles.contactUs__wrapper_title}>Contact us</h2>
       </div>
+
+      <form
+        className={styles.contactUs__addMassage}
+        onSubmit={onSubmit}>
+        <input
+          type='email'
+          placeholder='Enter your mail'
+          className={styles.contactUs__addMassage_input}
+          onChange={valOfInp}
+          value={val}
+        />
+        <button
+          type='submit'
+          className={styles.contactUs__addMassage_button}
+          disabled={validate}>
+          Send
+        </button>
+      </form>
+
       <div
         className={styles.modalWindow}
         style={{ display: disp }}>
@@ -61,9 +60,9 @@ export const HomeContactUs = () => {
           <div className={styles.modalWindow__wrapper_centerBlock}>
             <h2 className={styles.modalWindow__wrapper_centerBlock_thanks}>Thanks for sub</h2>
             <p className={styles.modalWindow__wrapper_centerBlock_email}>{val}</p>
-            <span
+            <button
               className={styles.modalWindow__wrapper_centerBlock_cross}
-              onClick={close}></span>
+              onClick={close}></button>
           </div>
         </div>
       </div>

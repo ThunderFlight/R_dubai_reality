@@ -1,47 +1,82 @@
 @import 'main';
 
 .contactUs {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  background-color: $GRAY;
   @include flex-col(center);
+  background-image: url(../../../images/contactUsBg.jpg);
+  min-height: 264px;
 
+  background-color: $GRAY;
+
+  @include media($SCREEN_DESKTOP) {
+    width: 100%;
+  }
   &__wrapper {
     @include flex-col(center, center);
 
     &_question {
-      @include text(18px, 600, $GRAY);
+      @include text(12px, 600, $GRAY);
+      margin-top: 49px;
+      margin-bottom: 19px;
+      @include media($SCREEN_TABLET) {
+        margin-bottom: 0;
+      }
+      @include media($SCREEN_DESKTOP) {
+        margin-top: 49px;
+        font-size: 18px;
+      }
     }
 
     &_title {
-      @include text(120px, 700, $GRAY);
+      @include text(50px, 700, $GRAY);
+      margin-bottom: 29px;
+      @include media($SCREEN_TABLET) {
+        font-size: 70px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        font-size: 120px;
+      }
     }
   }
 
   &__addMassage {
     @include flex-row(center);
+    margin-bottom: 50px;
+
     &_input {
-      width: 427px;
+      width: 288px;
+      min-height: 40px;
       border: 0px;
       padding: 15px 30px;
+
+      @include media($SCREEN_TABLET) {
+        width: 450px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        width: 470px;
+        min-height: 60px;
+      }
     }
 
     &_button {
-      width: 165px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      @include text(14px, 600, $WHITE);
+      width: 106px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       background-color: $GRAY;
-      color: $WHITE;
       cursor: pointer;
+      &:hover {
+        color: $YELLOW;
+      }
+      @include media($SCREEN_TABLET) {
+        width: 165px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 165px;
+      }
     }
   }
-}
-
-.bg {
-  padding-top: 87px;
-  background-image: url(../../../images/contactUsBg.jpg);
-  min-height: 400px;
 }
 
 .modalWindow {
@@ -50,8 +85,8 @@
     z-index: 3;
     position: fixed;
 
-    width: 100%;
-    height: 1070px;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba($color: $GRAY, $alpha: 0.9);
     top: 0;
     left: 0;
@@ -75,10 +110,12 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
+        left: 1295px;
+        bottom: 665px;
         position: absolute;
         z-index: 4;
-        left: 1325px;
-        bottom: 755px;
+        border: 1px solid black;
+        border-radius: 100px;
       }
     }
   }

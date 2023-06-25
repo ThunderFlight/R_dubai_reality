@@ -7,7 +7,7 @@ export const HomeOurExpertise = () => {
       <Container className={styles.container}>
         <h2 className={styles.ourExpertise__title}>Our expertise</h2>
         <span className={styles.ourExpertise__desc}>
-          &quot;The best apartment in Dubai&quot; we will find your dream
+          {`"The best apartment in Dubai" we will find your dream`}
         </span>
         <p className={styles.ourExpertise__text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh massa, euismod
