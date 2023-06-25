@@ -1,0 +1,102 @@
+@import 'main';
+
+.usefulArticles {
+  @include flex-col(center, center);
+  background-color: $GRAY;
+  padding-top: 140px;
+
+  &__wrapperTitle {
+    @include flex(space-between, center);
+    width: 1110px;
+    margin-bottom: 90px;
+
+    h2 {
+      @include text(70px, 700, $WHITE);
+    }
+
+    a {
+      @include flex-row(center);
+      @include text(16px, 600, #929292);
+      line-height: 21px;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    @include flex(center);
+    margin-top: 6px;
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #929292;
+    border-right: 1px solid #929292;
+
+    transform: rotate(45deg);
+  }
+
+  &__wrapperImage {
+    @include flex-row(center);
+    &_exterior {
+      @include flex(center);
+      background-image: url(../../../images/homeUsefulArticlesExterior.jpg);
+      width: 350px;
+      min-height: 352px;
+      margin-right: 30px;
+
+      h1 {
+        @include text(25px, 700, $WHITE);
+        margin-top: 260px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &_border {
+      border: 1px solid $YELLOW;
+      width: 350px;
+      min-height: 352px;
+      padding: 35px 40px 35px 30px;
+      margin-right: 30px;
+
+      &_date {
+        @include text(16px, 400, $WHITE);
+        margin-bottom: 15px;
+      }
+
+      &_title {
+        @include text(25px, 700, $WHITE);
+        line-height: 35px;
+        margin-bottom: 28px;
+      }
+
+      &_about {
+        @include text(16px, 300px, #929292);
+        line-height: 26px;
+        width: 270px;
+        margin-bottom: 80px;
+      }
+
+      &_link {
+        @include flex(_, center);
+        @include text(16px, 600, $YELLOW);
+        line-height: 24px;
+        cursor: pointer;
+        span {
+          @include flex(center);
+          margin-top: 6px;
+          margin-left: 10px;
+          width: 12px;
+          height: 12px;
+          border-top: 1px solid $YELLOW;
+          border-right: 1px solid $YELLOW;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &_interior {
+      background-image: url(../../../images/homeUsefulArticlesInterior.jpg);
+      width: 350px;
+      min-height: 352px;
+    }
+  }
+}

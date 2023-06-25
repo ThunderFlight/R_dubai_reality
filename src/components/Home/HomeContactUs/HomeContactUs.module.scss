@@ -4,7 +4,6 @@
   @include flex-col(center);
   background-image: url(../../../images/contactUsBg.jpg);
   min-height: 264px;
-
   background-color: $GRAY;
 
   @include media($SCREEN_DESKTOP) {

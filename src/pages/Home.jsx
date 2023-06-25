@@ -3,6 +3,7 @@ import {
   HomeContactUs,
   HomeOurExpertise,
   HomeQuote,
+  HomeUsefulArticles,
   HomeVideo,
 } from '../components/Home';
 
@@ -14,6 +15,7 @@ export const Home = () => {
       <HomeQuote />
       <HomeAppartaments />
       <HomeContactUs />
+      <HomeUsefulArticles />
     </div>
   );
 };
