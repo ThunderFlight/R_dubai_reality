@@ -4,7 +4,13 @@
   width: 100%;
   @include flex(center);
   background-color: $GRAY;
-
+  padding-bottom: 40px;
+  @include media($SCREEN_TABLET) {
+    padding-bottom: 72px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    padding-bottom: 115px;
+  }
   &__wrapper {
     width: 100%;
     margin-bottom: 20px;
