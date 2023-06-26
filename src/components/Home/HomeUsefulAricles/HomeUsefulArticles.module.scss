@@ -7,43 +7,80 @@
 
   &__wrapperTitle {
     @include flex(space-between, center);
-    width: 1110px;
-    margin-bottom: 90px;
+    min-width: 283px;
+    margin-bottom: 20px;
+    @include media($SCREEN_TABLET) {
+      width: 690px;
+      margin-bottom: 40px;
+    }
+
+    @include media($SCREEN_DESKTOP) {
+      width: 1110px;
+      margin-bottom: 90px;
+    }
 
     h2 {
-      @include text(70px, 700, $WHITE);
+      @include text(24px, 700, $WHITE);
+
+      @include media($SCREEN_TABLET) {
+        font-size: 30px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 70px;
+      }
     }
 
     a {
       @include flex-row(center);
-      @include text(16px, 600, #929292);
+
+      @include text(8px, 600, #929292);
       line-height: 21px;
       cursor: pointer;
+      @include media($SCREEN_TABLET) {
+        font-size: 12px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
     }
   }
 
-  &__arrow {
-    @include flex(center);
-    margin-top: 6px;
-    margin-left: 10px;
-    width: 12px;
-    height: 12px;
-    border-top: 1px solid #929292;
-    border-right: 1px solid #929292;
-
-    transform: rotate(45deg);
-  }
-
   &__wrapperImage {
-    @include flex-row(center);
+    @include flex-col(center);
+
+    @include media($SCREEN_TABLET) {
+      @include flex-row(center);
+    }
+
     &_exterior {
       @include flex(center);
-      background-image: url(../../../images/homeUsefulArticlesExterior.jpg);
-      width: 350px;
-      min-height: 352px;
-      margin-right: 30px;
+      background-image: url(../../../images/homeUsefulArticlesNewYorkBeach.jpg);
+      background-size: cover;
+      width: 290px;
+      min-height: 220px;
+      margin-bottom: 20px;
+      h2 {
+        display: none;
+      }
+      @include media($SCREEN_TABLET) {
+        width: 210px;
+        min-height: 220px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
 
-      h1 {
+      @include media($SCREEN_DESKTOP) {
+        background-image: url(../../../images/homeUsefulArticlesExterior.jpg);
+        width: 350px;
+        min-height: 352px;
+        h2 {
+          display: block;
+        }
+      }
+
+      h2 {
         @include text(25px, 700, $WHITE);
         margin-top: 260px;
         margin-bottom: 50px;
@@ -52,51 +89,133 @@
 
     &_border {
       border: 1px solid $YELLOW;
-      width: 350px;
-      min-height: 352px;
-      padding: 35px 40px 35px 30px;
-      margin-right: 30px;
+      width: 290px;
+      min-height: 220px;
+      padding: 31px 24px 25px 24px;
+      margin-bottom: 20px;
+      @include media($SCREEN_TABLET) {
+        width: 215px;
+        min-height: 220px;
+        padding: 31px 37px 25px 33px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        width: 350px;
+        min-height: 352px;
+        padding: 35px 40px 35px 30px;
+      }
 
       &_date {
-        @include text(16px, 400, $WHITE);
-        margin-bottom: 15px;
+        @include text(12px, 400, $WHITE);
+        margin-bottom: 13px;
+
+        @include media($SCREEN_DESKTOP) {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
       }
 
       &_title {
         @include text(25px, 700, $WHITE);
         line-height: 35px;
-        margin-bottom: 28px;
+        margin-bottom: 13px;
+
+        @include media($SCREEN_DESKTOP) {
+          font-size: 25px;
+          margin-bottom: 28px;
+        }
       }
 
       &_about {
-        @include text(16px, 300px, #929292);
+        @include text(12px, 300px, #929292);
         line-height: 26px;
-        width: 270px;
-        margin-bottom: 80px;
+        width: 240px;
+        margin-bottom: 14px;
+
+        @include media($SCREEN_TABLET) {
+          width: 150px;
+        }
+
+        @include media($SCREEN_DESKTOP) {
+          font-size: 16px;
+          width: 270px;
+          margin-bottom: 80px;
+        }
       }
 
       &_link {
         @include flex(_, center);
-        @include text(16px, 600, $YELLOW);
+        @include text(12px, 600, $YELLOW);
         line-height: 24px;
         cursor: pointer;
-        span {
-          @include flex(center);
-          margin-top: 6px;
-          margin-left: 10px;
-          width: 12px;
-          height: 12px;
-          border-top: 1px solid $YELLOW;
-          border-right: 1px solid $YELLOW;
-          transform: rotate(45deg);
+
+        @include media($SCREEN_DESKTOP) {
+          font-size: 16px;
         }
       }
     }
 
     &_interior {
-      background-image: url(../../../images/homeUsefulArticlesInterior.jpg);
-      width: 350px;
-      min-height: 352px;
+      @include flex(center);
+      background-image: url(../../../images/homeUsefulArticlesNewYork.jpg);
+      background-size: cover;
+      width: 290px;
+      min-height: 220px;
+      margin-bottom: 20px;
+      h2 {
+        display: none;
+      }
+      @include media($SCREEN_TABLET) {
+        width: 210px;
+        min-height: 220px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        background-image: url(../../../images/homeUsefulArticlesInterior.jpg);
+        width: 350px;
+        min-height: 352px;
+        h2 {
+          display: block;
+        }
+      }
+      h2 {
+        @include text(25px, 700, $WHITE);
+        margin-top: 260px;
+        margin-bottom: 50px;
+      }
     }
   }
+}
+.customArrowGray {
+  width: 10px;
+  height: 10px;
+  margin-top: 6px;
+  margin-left: 10px;
+  border-left-color: #929292;
+  border-top-color: #929292;
+  transform: rotate(132deg);
+  @include media($SCREEN_TABLET) {
+    width: 14px;
+    height: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  @include media($SCREEN_DESKTOP) {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+}
+.customArrowYellow {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  margin-left: 10px;
+  transform: rotate(132deg);
 }

@@ -1,3 +1,4 @@
+import { CustomArrow } from '../../common';
 import styles from './HomeUsefulArticles.module.scss';
 
 export const HomeUsefulArticles = () => {
@@ -6,12 +7,12 @@ export const HomeUsefulArticles = () => {
       <div className={styles.usefulArticles__wrapperTitle}>
         <h2>Useful articles</h2>
         <a>
-          View all articles <span className={styles.usefulArticles__arrow}></span>
+          View all articles <CustomArrow className={styles.customArrowGray} />
         </a>
       </div>
       <div className={styles.usefulArticles__wrapperImage}>
         <div className={styles.usefulArticles__wrapperImage_exterior}>
-          <h1>Discover Architecture</h1>
+          <h2>Discover Architecture</h2>
         </div>
 
         <div className={styles.usefulArticles__wrapperImage_border}>
@@ -23,11 +24,13 @@ export const HomeUsefulArticles = () => {
             Projects for many large domestic and foreign corporations, enterprises in many elds such
           </p>
           <a className={styles.usefulArticles__wrapperImage_border_link}>
-            Learn more <span></span>
+            Learn more <CustomArrow className={styles.customArrowYellow} />
           </a>
         </div>
 
-        <div className={styles.usefulArticles__wrapperImage_interior}></div>
+        <div className={styles.usefulArticles__wrapperImage_interior}>
+          <h2>Discover Architecture</h2>
+        </div>
       </div>
     </section>
   );
