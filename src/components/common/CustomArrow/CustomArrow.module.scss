@@ -1,0 +1,11 @@
+@import 'main';
+
+.arrow {
+  $size: 10px;
+  width: $size;
+  height: $size;
+  border: 1px solid transparent;
+  border-left-color: $YELLOW;
+  border-top-color: $YELLOW;
+  @include transition(all);
+}
