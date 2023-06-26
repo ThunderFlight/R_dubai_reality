@@ -1,0 +1,127 @@
+@import 'main';
+
+.navigation {
+  padding-top: 20px;
+  @include flex(space-between, center);
+  margin-bottom: 18px;
+
+  @include media($SCREEN_TABLET) {
+    margin-bottom: 20px;
+  }
+
+  @include media($SCREEN_DESKTOP) {
+    margin-bottom: 25px;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__menu {
+    width: 330px;
+    display: none;
+    align-items: center;
+
+    @include media($SCREEN_M) {
+      display: flex;
+    }
+
+    &_list {
+      width: 100%;
+      @include flex(space-between, center);
+    }
+
+    &_link {
+      position: relative;
+      @include text(14px, 400, $WHITE);
+      text-transform: uppercase;
+      padding-bottom: 3px;
+      @include transition(color);
+
+      &:hover {
+        color: $YELLOW;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color: $YELLOW;
+        @include transition(width);
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    @include flex(space-between, center);
+    display: none;
+
+    @include media($SCREEN_TABLET) {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+    @include text(14px, 600, $BLACK);
+    border: none;
+    background-color: $YELLOW;
+    @include transition(color);
+    cursor: pointer;
+    padding: 12px 14px 13px;
+    margin-right: 40px;
+    @include media($SCREEN_TABLET_LARGE) {
+      margin-right: 40px;
+    }
+    @include media($SCREEN_TABLET_LARGE) {
+      margin-right: 60px;
+    }
+
+    @include media($SCREEN_HD) {
+      margin-right: 120px;
+    }
+
+    &:hover {
+      color: rgba($BLACK, 0.2);
+    }
+  }
+
+  &__wrapperLang {
+    margin-right: 50px;
+
+    &_title {
+      @include text(14px, 600, #929292);
+      @include transition(color);
+      cursor: pointer;
+
+      &:hover {
+        color: $YELLOW;
+      }
+
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__phone {
+    @include text(16px, 600, $WHITE);
+    @include transition(color);
+    cursor: pointer;
+
+    &:hover {
+      color: $YELLOW;
+    }
+  }
+}
+
+.active {
+  color: $YELLOW;
+}
