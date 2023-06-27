@@ -1,0 +1,15 @@
+@import 'main';
+
+.button {
+  width: fit-content;
+  @include text(14px, 600, $BLACK);
+  border: none;
+  background-color: $YELLOW;
+  @include transition(color);
+  cursor: pointer;
+  padding: 12px 14px 13px;
+
+  &:hover {
+    color: rgba($BLACK, 0.2);
+  }
+}

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from '../common/';
+import { CustomButton, Logo } from '../common/';
 import styles from './TheNavigation.module.scss';
 
 export const TheNavigation = () => {
@@ -61,7 +61,7 @@ export const TheNavigation = () => {
       </div>
 
       <div className={styles.navigation__right}>
-        <button className={styles.navigation__btn}>Book a consultation</button>
+        <CustomButton className={styles.navigation__btn}>Book a consultation</CustomButton>
         <div className={styles.navigation__wrapperLang}>
           {[] &&
             languages.map((lang) => (
