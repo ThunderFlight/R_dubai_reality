@@ -1,6 +1,7 @@
 import {
   HomeAppartaments,
   HomeContactUs,
+  HomeLatest,
   HomeOurExpertise,
   HomeQuote,
   HomeVideo,
@@ -9,13 +10,14 @@ import { ContactUs } from '../components/common';
 
 export const Home = () => {
   return (
-    <div>
+    <>
+      <HomeLatest />
       <HomeOurExpertise />
       <HomeVideo />
       <HomeQuote />
       <HomeAppartaments />
       <HomeContactUs />
       <ContactUs />
-    </div>
+    </>
   );
 };
