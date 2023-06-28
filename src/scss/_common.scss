@@ -22,18 +22,18 @@ body {
   min-height: 100vh;
   background-color: $GRAY;
   color: $WHITE;
-  padding-left: 35px;
-  padding-right: 35px;
+  // padding-left: 35px;
+  // padding-right: 35px;
 
-  @include media($SCREEN_TABLET) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  // @include media($SCREEN_TABLET) {
+  //   padding-left: 40px;
+  //   padding-right: 40px;
+  // }
 
-  @include media($SCREEN_DESKTOP) {
-    padding-left: 55px;
-    padding-right: 55px;
-  }
+  // @include media($SCREEN_DESKTOP) {
+  //   padding-left: 55px;
+  //   padding-right: 55px;
+  // }
 }
 
 html {

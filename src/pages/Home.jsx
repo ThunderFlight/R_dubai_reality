@@ -6,6 +6,7 @@ import {
   HomeUsefulArticles,
   HomeVideo,
 } from '../components/Home';
+import { ContactUs } from '../components/common';
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
       <HomeAppartaments />
       <HomeContactUs />
       <HomeUsefulArticles />
+      <ContactUs />
     </div>
   );
 };

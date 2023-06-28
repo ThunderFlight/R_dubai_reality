@@ -69,13 +69,6 @@
   }
 
   &__btn {
-    width: fit-content;
-    @include text(14px, 600, $BLACK);
-    border: none;
-    background-color: $YELLOW;
-    @include transition(color);
-    cursor: pointer;
-    padding: 12px 14px 13px;
     margin-right: 40px;
     @include media($SCREEN_TABLET_LARGE) {
       margin-right: 40px;
@@ -86,10 +79,6 @@
 
     @include media($SCREEN_HD) {
       margin-right: 120px;
-    }
-
-    &:hover {
-      color: rgba($BLACK, 0.2);
     }
   }
 
