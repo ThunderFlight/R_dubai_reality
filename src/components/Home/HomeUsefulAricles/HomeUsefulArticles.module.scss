@@ -1,0 +1,208 @@
+@import 'main';
+
+.usefulArticles {
+  @include flex-col(center, center);
+  width: 100%;
+
+  &__titleUseful {
+    @include flex-row(space-between, center);
+    width: 300px;
+    margin-bottom: 20px;
+    @include media($SCREEN_TABLET) {
+      width: 700px;
+      margin-bottom: 40px;
+    }
+    @include media($SCREEN_DESKTOP) {
+      width: 1110px;
+      margin-bottom: 90px;
+    }
+
+    h2 {
+      @include text(24px, 700, $WHITE);
+      @include media($SCREEN_TABLET) {
+        font-size: 30px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        font-size: 70px;
+      }
+    }
+
+    span {
+      @include flex-row(_, center);
+      @include text(8px, 600, #929292);
+      @include media($SCREEN_TABLET) {
+        font-size: 12px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+    }
+
+    &_grayArrow {
+      $size: 8px;
+      border-top-color: #929292;
+      border-left-color: #929292;
+      transform: rotate(130deg);
+    }
+  }
+
+  &__divImagesBlock {
+    @include flex-col(center, center);
+    @include media($SCREEN_TABLET) {
+      @include flex-row(center, center);
+    }
+  }
+  &__ImgWrapper:last-child {
+    margin: 0px;
+    img {
+      margin: 0px;
+    }
+  }
+  &__ImgWrapper {
+    position: relative;
+    max-width: 290px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    @include media($SCREEN_TABLET) {
+      max-width: 220px;
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+    @include media($SCREEN_DESKTOP) {
+      max-width: 350px;
+    }
+    img {
+      max-width: 290px;
+      height: 30vh;
+      @include media($SCREEN_TABLET) {
+        height: 100%;
+        max-width: 220px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        max-width: 350px;
+      }
+    }
+
+    &:hover .usefulArticles__BorderMenuWrap {
+      padding: 35px 24px 25px 25px;
+      @include media($SCREEN_TABLET) {
+        padding: 15px 32px 25px 33px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        padding: 40px 35px 23px 35px;
+      }
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+
+      display: block;
+      position: absolute;
+      background-color: $GRAY;
+      border: 1px solid $YELLOW;
+      z-index: 2;
+
+      &_date {
+        line-height: 26px;
+        display: block;
+        margin-bottom: 10px;
+        @include media($SCREEN_DESKTOP) {
+          margin-bottom: 15px;
+        }
+      }
+      &_title {
+        display: block;
+        margin-bottom: 13px;
+
+        @include media($SCREEN_DESKTOP) {
+          line-height: 36px;
+          margin-bottom: 30px;
+        }
+      }
+      &_about {
+        display: block;
+        margin-bottom: 15px;
+        @include media($SCREEN_DESKTOP) {
+          line-height: 26px;
+          margin-bottom: 50px;
+        }
+      }
+      &_link {
+        display: block;
+
+        @include flex-row(_, center);
+      }
+    }
+  }
+
+  &__BorderMenuWrap {
+    @include transition(top);
+
+    position: absolute;
+    z-index: 2;
+    top: 285px;
+    left: 25px;
+    &_date {
+      @include text(12px, 200, $WHITE);
+      @include transition(margin-bottom);
+      margin-bottom: 0px;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+
+      display: none;
+    }
+    &_title {
+      @include text(25px, 700, $WHITE);
+
+      display: none;
+      margin-bottom: 0px;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 25px;
+        display: block;
+      }
+    }
+    &_about {
+      @include text(12px, 200, #929292);
+
+      margin-bottom: 0px;
+      display: none;
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+    }
+    &_link {
+      @include flex-row(_, center);
+      @include text(12px, 600, $YELLOW);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      display: none;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+    }
+    &_link:hover {
+      color: white;
+      .usefulArticles__hoverBorderMenuWrap_yellowArrow {
+        border-top-color: $WHITE;
+        border-left-color: $WHITE;
+      }
+    }
+    &_yellowArrow {
+      $size: 8px;
+
+      @include media($SCREEN_DESKTOP) {
+        $size: 10px;
+      }
+      border-top-color: $YELLOW;
+      border-left-color: $YELLOW;
+      transform: rotate(130deg);
+    }
+  }
+}
