@@ -2,18 +2,16 @@
 
 .usefulArticles {
   @include flex-col(center, center);
-  background-color: $GRAY;
-  padding-top: 140px;
+  width: 100%;
 
-  &__wrapperTitle {
-    @include flex(space-between, center);
-    min-width: 283px;
+  &__titleUseful {
+    @include flex-row(space-between, center);
+    width: 300px;
     margin-bottom: 20px;
     @include media($SCREEN_TABLET) {
-      width: 690px;
+      width: 700px;
       margin-bottom: 40px;
     }
-
     @include media($SCREEN_DESKTOP) {
       width: 1110px;
       margin-bottom: 90px;
@@ -21,201 +19,194 @@
 
     h2 {
       @include text(24px, 700, $WHITE);
-
       @include media($SCREEN_TABLET) {
         font-size: 30px;
       }
-
       @include media($SCREEN_DESKTOP) {
         font-size: 70px;
       }
     }
 
-    a {
-      @include flex-row(center);
-
+    span {
+      @include flex-row(_, center);
       @include text(8px, 600, #929292);
-      line-height: 21px;
-      cursor: pointer;
       @include media($SCREEN_TABLET) {
         font-size: 12px;
       }
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+    }
+
+    &_grayArrow {
+      $size: 8px;
+      border-top-color: #929292;
+      border-left-color: #929292;
+      transform: rotate(130deg);
+    }
+  }
+
+  &__divImagesBlock {
+    @include flex-col(center, center);
+    @include media($SCREEN_TABLET) {
+      @include flex-row(center, center);
+    }
+  }
+
+  &__allImgWrapper {
+    position: relative;
+    width: 290px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    @include media($SCREEN_TABLET) {
+      width: 220px;
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+    @include media($SCREEN_DESKTOP) {
+      width: 350px;
+      min-height: 350px;
+    }
+    img {
+      width: 290px;
+      @include media($SCREEN_TABLET) {
+        width: 220px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        width: 350px;
+        min-height: 350px;
+      }
+    }
+
+    &:hover .usefulArticles__BorderMenuWrap {
+      padding: 20px 24px 25px 25px;
+      @include media($SCREEN_TABLET) {
+        padding: 15px 32px 25px 33px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        padding: 40px 35px 23px 35px;
+      }
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+
+      display: block;
+      position: absolute;
+      background-color: $GRAY;
+      border: 1px solid $YELLOW;
+      z-index: 2;
+
+      &_date {
+        line-height: 26px;
+        display: block;
+        opacity: 1;
+        margin-bottom: 10px;
+        @include media($SCREEN_DESKTOP) {
+          margin-bottom: 15px;
+        }
+      }
+      &_title {
+        display: block;
+        opacity: 1;
+        margin-bottom: 13px;
+        @include media($SCREEN_DESKTOP) {
+          line-height: 36px;
+          margin-bottom: 30px;
+        }
+      }
+      &_about {
+        line-height: 26px;
+        display: block;
+        opacity: 1;
+        margin-bottom: 30px;
+        @include media($SCREEN_DESKTOP) {
+          margin-bottom: 50px;
+        }
+      }
+      &_link {
+        display: block;
+        opacity: 1;
+
+        @include flex-row(_, center);
+      }
+    }
+  }
+
+  &__BorderMenuWrap {
+    @include transition(top);
+
+    position: absolute;
+    z-index: 2;
+    top: 285px;
+    left: 25px;
+    // height: 0px;
+    &_date {
+      @include text(12px, 200, $WHITE);
+      @include transition(margin-bottom);
+      margin-bottom: 0px;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+
+      display: none;
+    }
+    &_title {
+      @include text(25px, 700, $WHITE);
+
+      display: none;
+      margin-bottom: 0px;
+      opacity: 0;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 25px;
+        display: block;
+        opacity: 1;
+      }
+    }
+    &_about {
+      @include text(12px, 200, #929292);
+
+      margin-bottom: 0px;
+      display: none;
+      opacity: 0;
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+    }
+    &_link {
+      @include flex-row(_, center);
+      @include text(12px, 600, $YELLOW);
+      height: 20px;
+      cursor: pointer;
+      display: none;
+      opacity: 0;
 
       @include media($SCREEN_DESKTOP) {
         font-size: 16px;
       }
     }
-  }
-
-  &__wrapperImage {
-    @include flex-col(center);
-
-    @include media($SCREEN_TABLET) {
-      @include flex-row(center);
-    }
-
-    &_exterior {
-      @include flex(center);
-      background-image: url(../../../images/homeUsefulArticlesNewYorkBeach.jpg);
-      background-size: cover;
-      width: 290px;
-      min-height: 220px;
-      margin-bottom: 20px;
-      h2 {
-        display: none;
+    &_link:hover {
+      color: white;
+      .usefulArticles__hoverBorderMenuWrap_yellowArrow {
+        border-top-color: $WHITE;
+        border-left-color: $WHITE;
       }
+    }
+    &_yellowArrow {
+      $size: 8px;
       @include media($SCREEN_TABLET) {
-        width: 210px;
-        min-height: 220px;
-        margin-right: 30px;
-        margin-bottom: 0px;
+        $size: 8px;
       }
-
       @include media($SCREEN_DESKTOP) {
-        background-image: url(../../../images/homeUsefulArticlesExterior.jpg);
-        width: 350px;
-        min-height: 352px;
-        h2 {
-          display: block;
-        }
+        $size: 10px;
       }
-
-      h2 {
-        @include text(25px, 700, $WHITE);
-        margin-top: 260px;
-        margin-bottom: 50px;
-      }
-    }
-
-    &_border {
-      border: 1px solid $YELLOW;
-      width: 290px;
-      min-height: 220px;
-      padding: 31px 24px 25px 24px;
-      margin-bottom: 20px;
-      @include media($SCREEN_TABLET) {
-        width: 215px;
-        min-height: 220px;
-        padding: 31px 37px 25px 33px;
-        margin-right: 30px;
-        margin-bottom: 0px;
-      }
-
-      @include media($SCREEN_DESKTOP) {
-        width: 350px;
-        min-height: 352px;
-        padding: 35px 40px 35px 30px;
-      }
-
-      &_date {
-        @include text(12px, 400, $WHITE);
-        margin-bottom: 13px;
-
-        @include media($SCREEN_DESKTOP) {
-          font-size: 16px;
-          margin-bottom: 15px;
-        }
-      }
-
-      &_title {
-        @include text(25px, 700, $WHITE);
-        line-height: 35px;
-        margin-bottom: 13px;
-
-        @include media($SCREEN_DESKTOP) {
-          font-size: 25px;
-          margin-bottom: 28px;
-        }
-      }
-
-      &_about {
-        @include text(12px, 300px, #929292);
-        line-height: 26px;
-        width: 240px;
-        margin-bottom: 14px;
-
-        @include media($SCREEN_TABLET) {
-          width: 150px;
-        }
-
-        @include media($SCREEN_DESKTOP) {
-          font-size: 16px;
-          width: 270px;
-          margin-bottom: 80px;
-        }
-      }
-
-      &_link {
-        @include flex(_, center);
-        @include text(12px, 600, $YELLOW);
-        line-height: 24px;
-        cursor: pointer;
-
-        @include media($SCREEN_DESKTOP) {
-          font-size: 16px;
-        }
-      }
-    }
-
-    &_interior {
-      @include flex(center);
-      background-image: url(../../../images/homeUsefulArticlesNewYork.jpg);
-      background-size: cover;
-      width: 290px;
-      min-height: 220px;
-      margin-bottom: 20px;
-      h2 {
-        display: none;
-      }
-      @include media($SCREEN_TABLET) {
-        width: 210px;
-        min-height: 220px;
-        margin-right: 30px;
-        margin-bottom: 0px;
-      }
-
-      @include media($SCREEN_DESKTOP) {
-        background-image: url(../../../images/homeUsefulArticlesInterior.jpg);
-        width: 350px;
-        min-height: 352px;
-        h2 {
-          display: block;
-        }
-      }
-      h2 {
-        @include text(25px, 700, $WHITE);
-        margin-top: 260px;
-        margin-bottom: 50px;
-      }
+      border-top-color: $YELLOW;
+      border-left-color: $YELLOW;
+      transform: rotate(130deg);
     }
   }
-}
-.customArrowGray {
-  width: 10px;
-  height: 10px;
-  margin-top: 6px;
-  margin-left: 10px;
-  border-left-color: #929292;
-  border-top-color: #929292;
-  transform: rotate(132deg);
-  @include media($SCREEN_TABLET) {
-    width: 14px;
-    height: 14px;
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-
-  @include media($SCREEN_DESKTOP) {
-    width: 20px;
-    height: 20px;
-    margin-top: 3px;
-    margin-left: 10px;
-  }
-}
-.customArrowYellow {
-  width: 12px;
-  height: 12px;
-  margin-top: 3px;
-  margin-left: 10px;
-  transform: rotate(132deg);
 }
