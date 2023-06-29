@@ -52,36 +52,41 @@
       @include flex-row(center, center);
     }
   }
-
-  &__allImgWrapper {
+  &__ImgWrapper:last-child {
+    margin: 0px;
+    img {
+      margin: 0px;
+    }
+  }
+  &__ImgWrapper {
     position: relative;
-    width: 290px;
+    max-width: 290px;
     margin-bottom: 30px;
     overflow: hidden;
     @include media($SCREEN_TABLET) {
-      width: 220px;
+      max-width: 220px;
       margin-right: 30px;
       margin-bottom: 0px;
     }
     @include media($SCREEN_DESKTOP) {
-      width: 350px;
-      min-height: 350px;
+      max-width: 350px;
     }
     img {
-      width: 290px;
+      max-width: 290px;
+      height: 30vh;
       @include media($SCREEN_TABLET) {
-        width: 220px;
+        height: 100%;
+        max-width: 220px;
         margin-right: 30px;
         margin-bottom: 0px;
       }
       @include media($SCREEN_DESKTOP) {
-        width: 350px;
-        min-height: 350px;
+        max-width: 350px;
       }
     }
 
     &:hover .usefulArticles__BorderMenuWrap {
-      padding: 20px 24px 25px 25px;
+      padding: 35px 24px 25px 25px;
       @include media($SCREEN_TABLET) {
         padding: 15px 32px 25px 33px;
       }
@@ -102,7 +107,6 @@
       &_date {
         line-height: 26px;
         display: block;
-        opacity: 1;
         margin-bottom: 10px;
         @include media($SCREEN_DESKTOP) {
           margin-bottom: 15px;
@@ -110,25 +114,23 @@
       }
       &_title {
         display: block;
-        opacity: 1;
         margin-bottom: 13px;
+
         @include media($SCREEN_DESKTOP) {
           line-height: 36px;
           margin-bottom: 30px;
         }
       }
       &_about {
-        line-height: 26px;
         display: block;
-        opacity: 1;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         @include media($SCREEN_DESKTOP) {
+          line-height: 26px;
           margin-bottom: 50px;
         }
       }
       &_link {
         display: block;
-        opacity: 1;
 
         @include flex-row(_, center);
       }
@@ -142,7 +144,6 @@
     z-index: 2;
     top: 285px;
     left: 25px;
-    // height: 0px;
     &_date {
       @include text(12px, 200, $WHITE);
       @include transition(margin-bottom);
@@ -159,12 +160,10 @@
 
       display: none;
       margin-bottom: 0px;
-      opacity: 0;
 
       @include media($SCREEN_DESKTOP) {
         font-size: 25px;
         display: block;
-        opacity: 1;
       }
     }
     &_about {
@@ -172,7 +171,6 @@
 
       margin-bottom: 0px;
       display: none;
-      opacity: 0;
       @include media($SCREEN_DESKTOP) {
         font-size: 16px;
       }
@@ -180,10 +178,10 @@
     &_link {
       @include flex-row(_, center);
       @include text(12px, 600, $YELLOW);
-      height: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       cursor: pointer;
       display: none;
-      opacity: 0;
 
       @include media($SCREEN_DESKTOP) {
         font-size: 16px;
@@ -198,9 +196,7 @@
     }
     &_yellowArrow {
       $size: 8px;
-      @include media($SCREEN_TABLET) {
-        $size: 8px;
-      }
+
       @include media($SCREEN_DESKTOP) {
         $size: 10px;
       }

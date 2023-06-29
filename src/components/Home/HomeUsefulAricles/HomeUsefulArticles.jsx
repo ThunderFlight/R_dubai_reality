@@ -3,7 +3,6 @@ import interior from '../../../images/homeUsefulArticlesInterior.jpg';
 import interiorSecond from '../../../images/homeUsefulArticlesInteriorSecond.jpg';
 import { CustomArrow } from '../../common';
 import styles from './HomeUsefulArticles.module.scss';
-
 export const HomeUsefulArticles = () => {
   return (
     <section className={styles.usefulArticles}>
@@ -15,11 +14,11 @@ export const HomeUsefulArticles = () => {
         </span>
       </div>
       <div className={styles.usefulArticles__divImagesBlock}>
-        <div className={styles.usefulArticles__allImgWrapper}>
+        <div className={styles.usefulArticles__ImgWrapper}>
           <img
             src={interiorSecond}
             alt='interiorSecond'
-            className={styles.usefulArticles__allImgWrapper_img}
+            className={styles.usefulArticles__ImgWrapper_img}
           />
 
           <div className={styles.usefulArticles__BorderMenuWrap}>
@@ -36,11 +35,11 @@ export const HomeUsefulArticles = () => {
           </div>
         </div>
 
-        <div className={styles.usefulArticles__allImgWrapper}>
+        <div className={styles.usefulArticles__ImgWrapper}>
           <img
             src={exterior}
             alt='exterior'
-            className={styles.usefulArticles__allImgWrapper_img}
+            className={styles.usefulArticles__ImgWrapper_img}
           />
 
           <div className={styles.usefulArticles__BorderMenuWrap}>
@@ -57,11 +56,11 @@ export const HomeUsefulArticles = () => {
           </div>
         </div>
 
-        <div className={styles.usefulArticles__allImgWrapper}>
+        <div className={styles.usefulArticles__ImgWrapper}>
           <img
             src={interior}
             alt='interior'
-            className={styles.usefulArticles__allImgWrapper_img}
+            className={styles.usefulArticles__ImgWrapper_img}
           />
 
           <div className={styles.usefulArticles__BorderMenuWrap}>
