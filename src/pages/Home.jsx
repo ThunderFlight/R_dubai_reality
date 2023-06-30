@@ -1,12 +1,12 @@
 import {
   HomeAppartaments,
+  HomeCarouselEmployee,
   HomeContactUs,
   HomeOurExpertise,
   HomeQuote,
   HomeUsefulArticles,
   HomeVideo,
 } from '../components/Home';
-import { ContactUs } from '../components/common';
 
 export const Home = () => {
   return (
@@ -17,7 +17,8 @@ export const Home = () => {
       <HomeAppartaments />
       <HomeContactUs />
       <HomeUsefulArticles />
-      <ContactUs />
+      {/* <ContactUs /> */}
+      <HomeCarouselEmployee />
     </div>
   );
 };

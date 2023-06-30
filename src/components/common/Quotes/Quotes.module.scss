@@ -1,0 +1,15 @@
+@import 'main';
+blockquote {
+  max-height: 60px;
+}
+
+blockquote:before,
+blockquote:after {
+  color: $YELLOW;
+  font-size: 125px;
+  width: 50px;
+}
+
+blockquote::before {
+  content: '”';
+}
