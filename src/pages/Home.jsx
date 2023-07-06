@@ -1,6 +1,7 @@
 import {
   HomeAppartaments,
   HomeContactUs,
+  HomeLatest,
   HomeOurExpertise,
   HomeQuote,
   HomeUsefulArticles,
@@ -10,7 +11,8 @@ import { ContactUs } from '../components/common';
 
 export const Home = () => {
   return (
-    <div>
+    <>
+      <HomeLatest />
       <HomeOurExpertise />
       <HomeVideo />
       <HomeQuote />
@@ -18,6 +20,6 @@ export const Home = () => {
       <HomeContactUs />
       <HomeUsefulArticles />
       <ContactUs />
-    </div>
+    </>
   );
 };
