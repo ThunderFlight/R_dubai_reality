@@ -1,3 +1,7 @@
+import { Grid } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
+import 'swiper/scss/grid';
 import HomeLatestPic01 from '../../../images/HomeLatest01.jpg';
 import HomeLatestPic02 from '../../../images/HomeLatest02.jpg';
 import HomeLatestPic03 from '../../../images/HomeLatest03.jpg';
@@ -41,8 +45,18 @@ export const HomeLatest = () => {
         </div>
       </Container>
       <div className={styles.slider}>
-        <ul className={styles.slider__list}>
-          <li className={styles.slider__list_item}>
+        <Swiper
+          modules={[Grid]}
+          spaceBetween={10}
+          slidesPerView={2}
+          loop={true}
+          breakpoints={{
+            600: {
+              slidesPerView: 4,
+            },
+          }}
+          className={styles.slider__list}>
+          <SwiperSlide className={styles.slider__list_item}>
             <img
               src={HomeLatestPic01}
               alt='Latest'
@@ -61,8 +75,8 @@ export const HomeLatest = () => {
                 <CustomArrow className={styles.slider__linkProject_icon} />
               </a>
             </div>
-          </li>
-          <li className={styles.slider__list_item}>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider__list_item}>
             <img
               src={HomeLatestPic03}
               alt='Latest'
@@ -81,8 +95,8 @@ export const HomeLatest = () => {
                 <CustomArrow className={styles.slider__linkProject_icon} />
               </a>
             </div>
-          </li>
-          <li className={styles.slider__list_item}>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider__list_item}>
             <img
               src={HomeLatestPic02}
               alt='Latest'
@@ -101,8 +115,28 @@ export const HomeLatest = () => {
                 <CustomArrow className={styles.slider__linkProject_icon} />
               </a>
             </div>
-          </li>
-          <li className={styles.slider__list_item}>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider__list_item}>
+            <img
+              src={HomeLatestPic03}
+              alt='Latest'
+              className={styles.slider__list_img}
+            />
+            <h2 className={styles.slider__list_title}>Dubai</h2>
+            <div className={styles.slider__wrapper}>
+              <p className={styles.slider__wrapper_descr}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer
+                aliquam consectetur. Faucibus vitae dui massa tellus magna sit.
+              </p>
+              <a
+                className={styles.slider__linkProject}
+                href='#'>
+                See project
+                <CustomArrow className={styles.slider__linkProject_icon} />
+              </a>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider__list_item}>
             <img
               src={HomeLatestPic03}
               alt='Latest'
@@ -121,8 +155,8 @@ export const HomeLatest = () => {
                 <CustomArrow className={styles.slider__linkProject_icon} />
               </a>
             </div>
-          </li>
-        </ul>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
