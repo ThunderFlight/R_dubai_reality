@@ -1,7 +1,7 @@
 import HomeLatestPic01 from '../../../images/HomeLatest01.jpg';
 import HomeLatestPic02 from '../../../images/HomeLatest02.jpg';
 import HomeLatestPic03 from '../../../images/HomeLatest03.jpg';
-import { Container } from '../../common/';
+import { Container, CustomArrow } from '../../common/';
 import styles from './HomeLatest.module.scss';
 
 export const HomeLatest = () => {
@@ -49,6 +49,18 @@ export const HomeLatest = () => {
               className={styles.slider__list_img}
             />
             <h2 className={styles.slider__list_title}>Villas</h2>
+            <div className={styles.slider__wrapper}>
+              <p className={styles.slider__wrapper_descr}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer
+                aliquam consectetur. Faucibus vitae dui massa tellus magna sit.
+              </p>
+              <a
+                className={styles.slider__linkProject}
+                href='#'>
+                See project
+                <CustomArrow className={styles.slider__linkProject_icon} />
+              </a>
+            </div>
           </li>
           <li className={styles.slider__list_item}>
             <img
@@ -57,6 +69,18 @@ export const HomeLatest = () => {
               className={styles.slider__list_img}
             />
             <h2 className={styles.slider__list_title}>Dubai</h2>
+            <div className={styles.slider__wrapper}>
+              <p className={styles.slider__wrapper_descr}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer
+                aliquam consectetur. Faucibus vitae dui massa tellus magna sit.
+              </p>
+              <a
+                className={styles.slider__linkProject}
+                href='#'>
+                See project
+                <CustomArrow className={styles.slider__linkProject_icon} />
+              </a>
+            </div>
           </li>
           <li className={styles.slider__list_item}>
             <img
@@ -65,6 +89,18 @@ export const HomeLatest = () => {
               className={styles.slider__list_img}
             />
             <h2 className={styles.slider__list_title}>Houses</h2>
+            <div className={styles.slider__wrapper}>
+              <p className={styles.slider__wrapper_descr}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer
+                aliquam consectetur. Faucibus vitae dui massa tellus magna sit.
+              </p>
+              <a
+                className={styles.slider__linkProject}
+                href='#'>
+                See project
+                <CustomArrow className={styles.slider__linkProject_icon} />
+              </a>
+            </div>
           </li>
           <li className={styles.slider__list_item}>
             <img
@@ -73,6 +109,18 @@ export const HomeLatest = () => {
               className={styles.slider__list_img}
             />
             <h2 className={styles.slider__list_title}>Villas</h2>
+            <div className={styles.slider__wrapper}>
+              <p className={styles.slider__wrapper_descr}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer
+                aliquam consectetur. Faucibus vitae dui massa tellus magna sit.
+              </p>
+              <a
+                className={styles.slider__linkProject}
+                href='#'>
+                See project
+                <CustomArrow className={styles.slider__linkProject_icon} />
+              </a>
+            </div>
           </li>
         </ul>
       </div>

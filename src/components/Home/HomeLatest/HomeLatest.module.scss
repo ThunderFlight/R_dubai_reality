@@ -112,6 +112,10 @@
 
     &_item {
       position: relative;
+
+      &:hover .slider__wrapper {
+        opacity: 1;
+      }
     }
 
     &_img {
@@ -125,14 +129,114 @@
     }
 
     &_item:hover > &_title {
-      top: 10%;
+      top: 5%;
+      bottom: 0;
+      color: $GRAY;
     }
 
     &_title {
       position: absolute;
-      @include transition(top);
-      top: 90%;
-      left: 15px;
+      top: 85%;
+      left: 10px;
+      z-index: 4;
+      @include text(18px, 700, $WHITE);
+      @include transition(top, color);
+
+      @include media($SCREEN_DESKTOP) {
+        top: 85%;
+        left: 20px;
+      }
+
+      @include media($SCREEN_HD) {
+        top: 85%;
+        left: 30px;
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $YELLOW;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    padding: 10px;
+    @include transition(opacity);
+
+    @include media($SCREEN_DESKTOP) {
+      padding: 20px;
+    }
+
+    @include media($SCREEN_HD) {
+      padding: 20px 30px;
+    }
+
+    @include media($SCREEN_RETINA) {
+      padding: 40px 30px;
+    }
+
+    &_descr {
+      @include text(12px, 400, $GRAY);
+      line-height: normal;
+
+      @include media($SCREEN_TABLET_SMALL) {
+        font-size: 10px;
+      }
+
+      @include media($SCREEN_TABLET) {
+        font-size: 12px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+
+      @include media($SCREEN_HD) {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__linkProject {
+    position: absolute;
+    bottom: 10px;
+    left: 9px;
+    display: flex;
+    align-items: center;
+    @include text(12px, 700, $GRAY);
+    z-index: 3;
+
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: 12px;
+    }
+    @include media($SCREEN_DESKTOP) {
+      font-size: 20px;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    @include media($SCREEN_HD) {
+      bottom: 20px;
+      left: 30px;
+    }
+
+    @include media($SCREEN_RETINA) {
+      bottom: 40px;
+    }
+
+    &_icon {
+      margin-left: 5px;
+      border-left-color: $GRAY;
+      border-top-color: $GRAY;
+      transform: rotate(135deg);
     }
   }
 }
