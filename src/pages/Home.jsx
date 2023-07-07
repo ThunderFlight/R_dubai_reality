@@ -1,6 +1,5 @@
 import {
   HomeAppartaments,
-  HomeContactUs,
   HomeLatest,
   HomeOurExpertise,
   HomeQuote,
@@ -17,9 +16,8 @@ export const Home = () => {
       <HomeVideo />
       <HomeQuote />
       <HomeAppartaments />
-      <HomeContactUs />
-      <HomeUsefulArticles />
       <ContactUs />
+      <HomeUsefulArticles />
     </>
   );
 };
