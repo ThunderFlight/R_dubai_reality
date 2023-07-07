@@ -1,5 +1,6 @@
 import {
   HomeAppartaments,
+  HomeFirstScreen,
   HomeLatest,
   HomeOurExpertise,
   HomeQuote,
@@ -11,6 +12,7 @@ import { ContactUs } from '../components/common';
 export const Home = () => {
   return (
     <>
+      <HomeFirstScreen />
       <HomeLatest />
       <HomeOurExpertise />
       <HomeVideo />
