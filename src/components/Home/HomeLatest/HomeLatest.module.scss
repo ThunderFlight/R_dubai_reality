@@ -3,18 +3,10 @@
 .latest {
   width: 100%;
   @include flex-col(center, center);
-  padding-left: 15px;
-  padding-right: 15px;
+  @include pX;
   margin-bottom: 70px;
 
-  @include media($SCREEN_TABLET) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   @include media($SCREEN_DESKTOP) {
-    padding-left: 55px;
-    padding-right: 55px;
     margin-bottom: 60px;
   }
 
