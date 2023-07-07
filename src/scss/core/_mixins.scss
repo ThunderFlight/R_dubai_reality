@@ -143,3 +143,18 @@ $z-index: (
     }
   }
 }
+
+@mixin pX {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media($SCREEN_TABLET) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include media($SCREEN_DESKTOP) {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}

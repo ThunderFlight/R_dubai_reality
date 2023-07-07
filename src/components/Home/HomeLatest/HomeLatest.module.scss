@@ -1,0 +1,250 @@
+@import 'main';
+
+.latest {
+  width: 100%;
+  @include flex-col(center, center);
+  @include pX;
+  margin-bottom: 70px;
+
+  @include media($SCREEN_DESKTOP) {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include text(24px, 700, $WHITE);
+    margin-bottom: 20px;
+
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    @include media($SCREEN_DESKTOP) {
+      font-size: 48px;
+      line-height: 69px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    @include flex(flex-start, center);
+
+    @include media($SCREEN_TABLET_SMALL) {
+      max-width: 300px;
+      justify-content: flex-end;
+    }
+
+    @include media($SCREEN_DESKTOP) {
+      max-width: 400px;
+    }
+
+    &_allProject {
+      @include text(12px, 600, #929292);
+      @include transition(color);
+
+      &:hover {
+        color: $YELLOW;
+      }
+    }
+  }
+
+  &__list {
+    @include flex(_, center);
+    margin-right: 30px;
+
+    @include media($SCREEN_DESKTOP) {
+      margin-right: 35px;
+    }
+
+    &_item {
+      margin-right: 30px;
+
+      @include media($SCREEN_DESKTOP) {
+        margin-right: 35px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &_link {
+      @include text(12px, 600, $WHITE);
+      line-height: normal;
+      @include transition(color);
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      &:hover {
+        color: $YELLOW;
+      }
+    }
+  }
+}
+
+// Slider
+
+.slider {
+  width: 100%;
+
+  &__list {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media($SCREEN_TABLET_SMALL) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 10px;
+      row-gap: 0;
+    }
+
+    &_item {
+      position: relative;
+
+      &:hover .slider__wrapper {
+        opacity: 1;
+      }
+    }
+
+    &_img {
+      width: 100%;
+      min-width: 130px;
+      cursor: pointer;
+
+      @include media($SCREEN_TABLET) {
+        min-width: 165px;
+      }
+    }
+
+    &_item:hover > &_title {
+      top: 5%;
+      bottom: 0;
+      color: $GRAY;
+    }
+
+    &_title {
+      position: absolute;
+      top: 85%;
+      left: 10px;
+      z-index: 4;
+      @include text(18px, 700, $WHITE);
+      @include transition(top, color);
+
+      @include media($SCREEN_DESKTOP) {
+        top: 85%;
+        left: 20px;
+      }
+
+      @include media($SCREEN_HD) {
+        top: 85%;
+        left: 30px;
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $YELLOW;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    padding: 10px;
+    @include transition(opacity);
+
+    @include media($SCREEN_DESKTOP) {
+      padding: 20px;
+    }
+
+    @include media($SCREEN_HD) {
+      padding: 20px 30px;
+    }
+
+    @include media($SCREEN_RETINA) {
+      padding: 40px 30px;
+    }
+
+    &_descr {
+      @include text(12px, 400, $GRAY);
+      line-height: normal;
+
+      @include media($SCREEN_TABLET_SMALL) {
+        font-size: 10px;
+      }
+
+      @include media($SCREEN_TABLET) {
+        font-size: 12px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+
+      @include media($SCREEN_HD) {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__linkProject {
+    position: absolute;
+    bottom: 10px;
+    left: 9px;
+    display: flex;
+    align-items: center;
+    @include text(12px, 700, $GRAY);
+    z-index: 3;
+
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: 12px;
+    }
+    @include media($SCREEN_DESKTOP) {
+      font-size: 20px;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    @include media($SCREEN_HD) {
+      bottom: 20px;
+      left: 30px;
+    }
+
+    @include media($SCREEN_RETINA) {
+      bottom: 40px;
+    }
+
+    &_icon {
+      margin-left: 5px;
+      border-left-color: $GRAY;
+      border-top-color: $GRAY;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  @include flex-col(space-between, flex-start);
+  margin-bottom: 10px;
+
+  @include media($SCREEN_TABLET_SMALL) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  @include media($SCREEN_DESKTOP) {
+    margin-bottom: 75px;
+  }
+}

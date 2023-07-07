@@ -1,7 +1,6 @@
 import {
   HomeAppartaments,
-  HomeCarouselEmployee,
-  HomeContactUs,
+  HomeLatest,
   HomeOurExpertise,
   HomeQuote,
   HomeUsefulArticles,
@@ -10,15 +9,14 @@ import {
 
 export const Home = () => {
   return (
-    <div>
+    <>
+      <HomeLatest />
       <HomeOurExpertise />
       <HomeVideo />
       <HomeQuote />
       <HomeAppartaments />
-      <HomeContactUs />
+      <ContactUs />
       <HomeUsefulArticles />
-      {/* <ContactUs /> */}
-      <HomeCarouselEmployee />
-    </div>
+    </>
   );
 };

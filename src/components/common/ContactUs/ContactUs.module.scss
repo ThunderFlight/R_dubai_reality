@@ -1,7 +1,7 @@
 @import 'main';
 
 .contactUs {
-  margin-top: 20px;
+  width: calc(100% - 30px);
   position: relative;
   @include flex-col(flex-start, center);
   background-image: url(../../../images/ContactUsBG_mobile.jpg);
@@ -9,16 +9,18 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px 35px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 
   @include media($SCREEN_TABLET_SMALL) {
     background-image: url(../../../images/contactUsBg.jpg);
     padding-bottom: 60px;
-    margin-bottom: 70px;
+    margin: 0 auto 70px;
+    width: calc(100% - 60px);
   }
 
   @include media($SCREEN_DESKTOP) {
-    margin-bottom: 140px;
+    margin: 0 auto 140px;
+    width: calc(100% - 110px);
   }
 
   &__subtitle {
@@ -43,7 +45,7 @@
       font-size: 70px;
     }
 
-    @include media($SCREEN_TABLET) {
+    @include media($SCREEN_HD) {
       font-size: 120px;
       line-height: 69px;
       margin-bottom: 55px;
