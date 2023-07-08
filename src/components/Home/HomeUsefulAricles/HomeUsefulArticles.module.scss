@@ -3,7 +3,7 @@
 .usefulArticles {
   @include flex-col(center, center);
   width: 100%;
-
+  margin-bottom: 226px;
   &__titleUseful {
     @include flex-row(space-between, center);
     width: 300px;

@@ -1,0 +1,19 @@
+@import 'main';
+blockquote {
+  max-height: 50px;
+  width: 50px;
+}
+
+blockquote:before,
+blockquote:after {
+  color: $YELLOW;
+  font-size: 100px;
+  width: 50px;
+  @include media($SCREEN_DESKTOP) {
+    font-size: 125px;
+  }
+}
+
+blockquote::before {
+  content: '”';
+}

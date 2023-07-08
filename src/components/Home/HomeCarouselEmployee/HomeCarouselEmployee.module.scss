@@ -1,0 +1,72 @@
+@import 'main';
+
+.carouselEmployee {
+  @include flex(center, center);
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  @include media($SCREEN_TABLET) {
+    width: calc(100% - 60px);
+  }
+  @include media($SCREEN_DESKTOP) {
+    width: 100%;
+  }
+  &__swiperElement {
+    padding: 0px 45px 23px 30px;
+    max-width: 525px;
+    border: 1px solid $YELLOW;
+    position: relative;
+  }
+  &__avatarWrapper {
+    @include flex(flex-end);
+    margin-bottom: 18px;
+    &_avatar {
+      top: -30px;
+      left: 20px;
+      position: absolute;
+      border-radius: 100%;
+      width: 68px;
+      height: 68px;
+      @include media($SCREEN_DESKTOP) {
+        top: -60px;
+        width: 112px;
+        height: 112px;
+      }
+    }
+  }
+  &__descOfEmployee {
+    @include flex-col(flex-start);
+    &_name {
+      @include text(25px, 700, $WHITE);
+      margin-bottom: 13px;
+      @include media($SCREEN_DESKTOP) {
+        margin-bottom: 19px;
+      }
+    }
+    &_ownerOf {
+      @include text(12px, 400, $WHITE);
+      margin-bottom: 8px;
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+        margin-bottom: 34px;
+      }
+    }
+    &_ownerOf a {
+      @include text(12px, 400, $WHITE);
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+      }
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+    &_ownerOf a:hover {
+      color: $LIGHTGRAY;
+    }
+    &_about {
+      @include text(12px, 400, $LIGHTGRAY);
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}
