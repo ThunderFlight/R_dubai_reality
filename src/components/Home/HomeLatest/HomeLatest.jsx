@@ -1,4 +1,4 @@
-import { Grid } from 'swiper/modules';
+import { Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/grid';

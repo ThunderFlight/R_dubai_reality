@@ -1,7 +1,8 @@
 import React from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import paul from '../../../images/HomeCarouselEmployeePaul.jpg';
 import robert from '../../../images/HomeCarouselEmployeeRobert.jpg';
@@ -12,24 +13,14 @@ export const HomeCarouselEmployee = () => {
   return (
     <section className={styles.carouselEmployee}>
       <Swiper
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
         slidesPerView={3}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
+        modules={[Pagination]}
+        className={styles.mySwiper}
+        style={{ paddingTop: '60px' }}
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -49,10 +40,7 @@ export const HomeCarouselEmployee = () => {
             slidesPerView: 4,
             spaceBetween: 40,
           },
-        }}
-        modules={[Pagination]}
-        className={styles.mySwiper}
-        style={{ paddingTop: '60px' }}>
+        }}>
         <SwiperSlide className={styles.carouselEmployee__slideWrapper}>
           <div className={styles.carouselEmployee__avatarWrapper}>
             <img
