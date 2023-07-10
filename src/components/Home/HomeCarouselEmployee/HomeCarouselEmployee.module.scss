@@ -4,6 +4,9 @@
 }
 .mySwiper {
   width: calc(100% - 30px);
+  @include media($SCREEN_TABLET) {
+    width: calc(100% - 40px);
+  }
 
   @include media($SCREEN_DESKTOP) {
     width: calc(100% - 60px);
