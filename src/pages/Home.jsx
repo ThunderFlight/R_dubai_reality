@@ -1,24 +1,24 @@
 import {
   HomeAppartaments,
   HomeCarouselEmployee,
-  HomeContactUs,
+  HomeLatest,
   HomeOurExpertise,
   HomeQuote,
   HomeUsefulArticles,
   HomeVideo,
 } from '../components/Home';
-
+import { ContactUs } from '../components/common';
 export const Home = () => {
   return (
-    <div>
+    <>
+      <HomeLatest />
       <HomeOurExpertise />
       <HomeVideo />
       <HomeQuote />
       <HomeAppartaments />
-      <HomeContactUs />
+      <ContactUs />
       <HomeUsefulArticles />
-      {/* <ContactUs /> */}
       <HomeCarouselEmployee />
-    </div>
+    </>
   );
 };
