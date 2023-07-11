@@ -22,7 +22,7 @@ export const HomeCarouselEmployee = () => {
         className={styles.mySwiper}
         style={{ paddingTop: '60px' }}
         breakpoints={{
-          320: {
+          321: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
