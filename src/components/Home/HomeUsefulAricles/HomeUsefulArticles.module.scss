@@ -12,7 +12,7 @@
   }
   &__titleUseful {
     @include flex-row(space-between, center);
-    width: 300px;
+    width: 290px;
     margin-bottom: 20px;
     @include media($SCREEN_TABLET) {
       width: 700px;
