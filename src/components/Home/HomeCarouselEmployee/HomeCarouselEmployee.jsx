@@ -6,7 +6,6 @@ import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import paul from '../../../images/HomeCarouselEmployeePaul.jpg';
 import robert from '../../../images/HomeCarouselEmployeeRobert.jpg';
-import { Quotes } from '../../common/Quotes/Quotes';
 import styles from './HomeCarouselEmployee.module.scss';
 
 export const HomeCarouselEmployee = () => {
@@ -22,7 +21,7 @@ export const HomeCarouselEmployee = () => {
         className={styles.mySwiper}
         style={{ paddingTop: '60px' }}
         breakpoints={{
-          321: {
+          320: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
@@ -48,7 +47,7 @@ export const HomeCarouselEmployee = () => {
               alt='robert'
               className={styles.carouselEmployee__avatarWrapper_avatar}
             />
-            <Quotes className={styles.carouselEmployee__avatarWrapper_quotes} />
+            <span className={styles.carouselEmployee__avatarWrapper_quotes}>”</span>
           </div>
 
           <div className={styles.carouselEmployee__aboutWrapper}>
@@ -69,7 +68,7 @@ export const HomeCarouselEmployee = () => {
               alt='paul'
               className={styles.carouselEmployee__avatarWrapper_avatar}
             />
-            <Quotes className={styles.carouselEmployee__avatarWrapper_quotes} />
+            <span className={styles.carouselEmployee__avatarWrapper_quotes}>”</span>
           </div>
 
           <div className={styles.carouselEmployee__aboutWrapper}>
@@ -90,7 +89,7 @@ export const HomeCarouselEmployee = () => {
               alt='robert'
               className={styles.carouselEmployee__avatarWrapper_avatar}
             />
-            <Quotes className={styles.carouselEmployee__avatarWrapper_quotes} />
+            <span className={styles.carouselEmployee__avatarWrapper_quotes}>”</span>
           </div>
 
           <div className={styles.carouselEmployee__aboutWrapper}>
@@ -111,7 +110,7 @@ export const HomeCarouselEmployee = () => {
               alt='paul'
               className={styles.carouselEmployee__avatarWrapper_avatar}
             />
-            <Quotes className={styles.carouselEmployee__avatarWrapper_quotes} />
+            <span className={styles.carouselEmployee__avatarWrapper_quotes}>”</span>
           </div>
 
           <div className={styles.carouselEmployee__aboutWrapper}>

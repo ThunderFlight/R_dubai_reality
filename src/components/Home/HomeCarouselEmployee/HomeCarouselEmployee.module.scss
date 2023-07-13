@@ -15,10 +15,10 @@
 .carouselEmployee {
   &__slideWrapper {
     border: 1px solid $YELLOW;
-    padding: 0px 27px 9px 23px;
+    padding: 0px 27px 20px 23px;
     margin-bottom: 18px;
     @include media($SCREEN_TABLET) {
-      padding: 0px 26px 15px 30px;
+      padding: 0px 26px 30px 30px;
     }
     @include media($SCREEN_DESKTOP) {
       padding: 0px 45px 27px 30px;
@@ -27,7 +27,13 @@
   &__avatarWrapper {
     position: relative;
     @include flex-row(flex-end);
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    @include media($SCREEN_DESKTOP) {
+      margin-bottom: 30px;
+    }
+    @include media($SCREEN_RETINA) {
+      margin-bottom: 50px;
+    }
     &_avatar {
       border-radius: 100%;
       position: absolute;
@@ -36,11 +42,29 @@
       top: -30px;
       width: 68px;
       height: 68px;
+      @include media($SCREEN_TABLET) {
+        width: 80px;
+        height: 80px;
+      }
       @include media($SCREEN_DESKTOP) {
+        top: -55px;
+        width: 108px;
+        height: 108px;
+      }
+      @include media($SCREEN_RETINA) {
         top: -60px;
         width: 128px;
         height: 128px;
       }
+    }
+    &_quotes {
+      color: #fcd54c;
+      font-family: Work Sans;
+      font-size: 100px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      height: 40px;
     }
   }
   &__aboutWrapper {
@@ -56,17 +80,17 @@
       margin-bottom: 8px;
       @include media($SCREEN_DESKTOP) {
         font-size: 16px;
-        margin-bottom: 34px;
+        margin-bottom: 16px;
       }
     }
     &_ownerOf a {
       color: $YELLOW;
     }
     &_autobiography {
-      line-height: 26px;
       @include text(12px, 400, $LIGHTGRAY);
       @include media($SCREEN_DESKTOP) {
         font-size: 16px;
+        line-height: 26px;
       }
     }
   }
