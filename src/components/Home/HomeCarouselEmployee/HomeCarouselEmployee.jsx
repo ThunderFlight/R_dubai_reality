@@ -1,8 +1,7 @@
 import React from 'react';
+import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import paul from '../../../images/HomeCarouselEmployeePaul.jpg';
 import robert from '../../../images/HomeCarouselEmployeeRobert.jpg';
