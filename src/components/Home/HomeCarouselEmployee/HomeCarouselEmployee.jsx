@@ -31,7 +31,7 @@ export const HomeCarouselEmployee = () => {
 
           1024: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 39,
           },
 
           2560: {
