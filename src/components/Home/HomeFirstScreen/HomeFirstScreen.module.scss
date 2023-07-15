@@ -1,0 +1,128 @@
+@import 'main';
+
+.firstScreen {
+  position: relative;
+  @include pX;
+  width: 100%;
+  min-height: 325px;
+
+  &__social {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 42px;
+
+    @include media($SCREEN_TABLET) {
+      display: flex;
+    }
+
+    @include media($SCREEN_DESKTOP) {
+      top: 40px;
+      right: 75px;
+    }
+  }
+
+  &__img {
+    width: 100vw;
+    height: 100%;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 4px solid $YELLOW;
+    padding: 15px;
+    z-index: 100;
+    @include media($SCREEN_DESKTOP) {
+      padding: 45px 25px 50px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0px;
+      height: 4px;
+      width: 60px;
+      background-color: $YELLOW;
+      @include media($SCREEN_TABLET_SMALL) {
+        width: 75px;
+      }
+      @include media($SCREEN_DESKTOP) {
+        width: 125px;
+      }
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &_subtitle {
+      @include text(10px, 400, $WHITE);
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+
+      @include media($SCREEN_DESKTOP) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &_title {
+      @include text(30px, 700, $WHITE);
+      line-height: normal;
+      text-transform: capitalize;
+      min-width: 231px;
+      margin-bottom: 60px;
+      span {
+        color: $YELLOW;
+      }
+      @include media($SCREEN_TABLET_SMALL) {
+        font-size: 50px;
+        width: 421px;
+        margin-bottom: 8px;
+      }
+
+      @include media($SCREEN_DESKTOP) {
+        margin-bottom: 20px;
+      }
+      @include media($SCREEN_HD) {
+        font-size: 96px;
+        width: 741px;
+      }
+    }
+
+    &_link {
+      display: flex;
+      align-items: center;
+      @include text(16px, 700, $WHITE);
+      line-height: normal;
+      @include transition(color);
+      &:hover {
+        color: $YELLOW;
+      }
+    }
+
+    &_linkIcon {
+      transform: rotate(130deg);
+      border-top-color: $WHITE;
+      border-left-color: $WHITE;
+      margin-left: 7px;
+      margin-top: 3px;
+    }
+  }
+}
+
+.item {
+  min-height: 322px;
+  @include media($SCREEN_DESKTOP) {
+    height: 100vh;
+  }
+}

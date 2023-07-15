@@ -50,3 +50,14 @@ input[type='password'] {
   -appearance: none;
   border-radius: 0;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: $GRAY;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: $YELLOW;
+}
