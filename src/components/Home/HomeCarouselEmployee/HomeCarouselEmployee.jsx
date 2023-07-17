@@ -31,12 +31,12 @@ export const HomeCarouselEmployee = () => {
 
           1024: {
             slidesPerView: 3,
-            spaceBetween: 39,
+            spaceBetween: 40,
           },
 
           2560: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 39,
           },
         }}>
         <SwiperSlide className={styles.carouselEmployee__slideWrapper}>
