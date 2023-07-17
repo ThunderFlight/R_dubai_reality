@@ -3,16 +3,25 @@
 .usefulArticles {
   @include flex-col(center, center);
   width: 100%;
-  margin-bottom: 226px;
+  margin-bottom: 50px;
+  @include media($SCREEN_TABLET) {
+    margin-bottom: 80px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    margin-bottom: 170px;
+  }
   &__titleUseful {
     @include flex-row(space-between, center);
-    width: 300px;
+    width: 290px;
     margin-bottom: 20px;
     @include media($SCREEN_TABLET) {
       width: 700px;
       margin-bottom: 40px;
     }
     @include media($SCREEN_DESKTOP) {
+      width: 910px;
+    }
+    @include media($SCREEN_FULLHD) {
       width: 1110px;
       margin-bottom: 90px;
     }
@@ -69,11 +78,15 @@
       margin-bottom: 0px;
     }
     @include media($SCREEN_DESKTOP) {
+      max-width: 290px;
+    }
+    @include media($SCREEN_FULLHD) {
       max-width: 350px;
     }
+
     img {
       max-width: 290px;
-      height: 30vh;
+
       @include media($SCREEN_TABLET) {
         height: 100%;
         max-width: 220px;
@@ -81,6 +94,9 @@
         margin-bottom: 0px;
       }
       @include media($SCREEN_DESKTOP) {
+        max-width: 269px;
+      }
+      @include media($SCREEN_FULLHD) {
         max-width: 350px;
       }
     }
@@ -91,6 +107,9 @@
         padding: 15px 32px 25px 33px;
       }
       @include media($SCREEN_DESKTOP) {
+        padding: 30px 35px 23px 35px;
+      }
+      @include media($SCREEN_FULLHD) {
         padding: 40px 35px 23px 35px;
       }
       width: 100%;
@@ -109,30 +128,47 @@
         display: block;
         margin-bottom: 10px;
         @include media($SCREEN_DESKTOP) {
+          margin-bottom: 10px;
+        }
+        @include media($SCREEN_FULLHD) {
           margin-bottom: 15px;
         }
       }
       &_title {
         display: block;
-        margin-bottom: 13px;
-
+        margin-bottom: 20px;
+        @include media($SCREEN_TABLET) {
+          margin-bottom: 13px;
+        }
         @include media($SCREEN_DESKTOP) {
+          margin-bottom: 10px;
+        }
+        @include media($SCREEN_FULLHD) {
           line-height: 36px;
           margin-bottom: 30px;
         }
       }
       &_about {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        @include media($SCREEN_TABLET) {
+          margin-bottom: 5px;
+        }
         @include media($SCREEN_DESKTOP) {
+          margin-bottom: 10px;
+        }
+        @include media($SCREEN_FULLHD) {
           line-height: 26px;
           margin-bottom: 50px;
         }
       }
       &_link {
         display: block;
-
         @include flex-row(_, center);
+        margin-bottom: 25px;
+        @include media($SCREEN_DESKTOP) {
+          margin-bottom: 0px;
+        }
       }
     }
   }

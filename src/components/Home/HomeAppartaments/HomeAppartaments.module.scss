@@ -1,15 +1,21 @@
 @import 'main';
 
 .appartaments {
-  width: 100%;
   @include flex(center);
   background-color: $GRAY;
   padding-bottom: 40px;
+  width: calc(100% - 35px);
+  margin: 0 auto;
   @include media($SCREEN_TABLET) {
     padding-bottom: 72px;
+    width: calc(100% - 70px);
   }
   @include media($SCREEN_DESKTOP) {
     padding-bottom: 115px;
+    width: calc(100% - 140px);
+  }
+  @include media($SCREEN_FULLHD) {
+    width: 100%;
   }
   &__wrapper {
     width: 100%;

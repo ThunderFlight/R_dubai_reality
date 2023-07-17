@@ -4,7 +4,17 @@
   background-color: $GRAY;
   @include flex(center);
   padding-top: 120px;
-  width: 100%;
+  width: calc(100% - 35px);
+  margin: 0 auto;
+  @include media($SCREEN_TABLET) {
+    width: calc(100% - 70px);
+  }
+  @include media($SCREEN_DESKTOP) {
+    width: calc(100% - 140px);
+  }
+  @include media($SCREEN_FULLHD) {
+    width: 100%;
+  }
 
   &__text {
     @include text(16px, 400, $WHITE);
